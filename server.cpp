@@ -7,6 +7,7 @@
 #include <strings.h>
 #include <unistd.h>
 #include <errno.h> 
+#include "include/responce.cpp"
 #define PORT 8080
 #define buff_size 512
 
@@ -52,6 +53,7 @@ int main()
     struct sockaddr_in serv_addr, client_addr;
     char * tocken;
     char * path;
+    HTTP_Responce resp;
     printf("Initilizing Socket \n");
     sockfd = socket(AF_INET,SOCK_STREAM,0);
     //close(sockfd);
